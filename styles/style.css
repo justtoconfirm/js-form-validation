@@ -2,3 +2,15 @@ label,
 input {
 	display: block;
 }
+
+input {
+	padding: 10px;
+}
+
+.email-field:valid {
+	border: 1px solid #eee;
+}
+
+.email-field:invalid {
+	border: 1px solid red;
+}
