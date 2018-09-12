@@ -20,7 +20,8 @@
 		}
 
 		// Generate an empty object within the window object
-		var _formValidObject = {};
+		// Check to see if the object currently exists before creating it
+		var _formValidObject = _formValidObject || {};
 
 		// This variable containing properties will be inaccessible outside of the library
 		var settings = {
