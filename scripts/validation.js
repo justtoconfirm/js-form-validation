@@ -9,6 +9,16 @@
 	// This function will contain all our code
 	function formValidInit() {
 
+		// TESTING:
+		// Add the novalidate attribute when the JS loads
+		// Disable the native browser validation by adding the novalidate attribute to our forms
+		// The native browser validation will be applied as fallback should the JS not load
+		// Add the 'validate' class to the <form> element to apply
+		var forms = document.querySelectorAll('.js-validate');
+		for (var i = 0; i < forms.length; i++) {
+			forms[i].setAttribute('novalidate', true);
+		}
+
 		// Generate an empty object within the window object
 		var _formValidObject = {};
 
