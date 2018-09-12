@@ -1,5 +1,6 @@
 // https://ourcodeworld.com/articles/read/37/how-to-create-your-own-javascript-library
 // https://code.tutsplus.com/tutorials/build-your-first-javascript-library--net-26796
+// http://dfsq.info/site/read/writing-your-own-jquery
 
 (function(window) {
 
@@ -7,6 +8,7 @@
 	'use strict';
 
 	// This function will contain all our code
+	// Constructor
 	function formValidInit() {
 
 		// TESTING:
