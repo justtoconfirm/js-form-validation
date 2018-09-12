@@ -12,12 +12,39 @@
 		// Generate an empty object within the window object
 		var _formValidObject = {};
 
-		// We will add functions to our library here
+		// This variable containing properties will be inaccessible outside of the library
+		var settings = {
+			testingProp: 100,
+			disabled: false
+		};
+
+		/* We will add functions to our library here */
+
+		// Method used for testing
+		// e.g. formValid.setTesting(400);
+		_formValidObject.setTesting = function(value) {
+			settings.testingProp = value;
+			return value;
+		};
+
+		// Change a private property
+		// Allows disabled property to be set to true or false
+		// e.g. formValid.setDisabled(true);
+		_formValidObject.setDisabled = function(disabledStatus) {
+			if (typeof(disabledStatus) === 'boolean') {
+				settings.disabled = disabledStatus;
+			} else {
+				console.error('Disabled needs to be set to true or false');
+			}
+
+			return settings.disabled;
+		};
 
 		return _formValidObject;
 	}
 
 	// Library needs to be globally accessible, save in window object
+	// 'formValid' becomes similar to '$' in jQuery
 	if(typeof(window.formValid) === 'undefined') {
 		window.formValid = formValidInit();
 	}
