@@ -1,8 +1,9 @@
 // https://ourcodeworld.com/articles/read/37/how-to-create-your-own-javascript-library
 // https://code.tutsplus.com/tutorials/build-your-first-javascript-library--net-26796
 // http://dfsq.info/site/read/writing-your-own-jquery
+// https://stackoverflow.com/questions/11167317/what-is-the-purpose-of-a-parameter-named-undefined-in-a-javascript-function
 
-(function(window) {
+(function(window, undefined) {
 
 	// Enable strict mode
 	'use strict';
